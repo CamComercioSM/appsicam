@@ -1,7 +1,6 @@
 <?php
-echo __DIR__;die();
 
-require_once '/base.php';
+require_once '/home/s1c4mapps/public_html/base.php';
 
 class Config extends ConfigAPP {
 
