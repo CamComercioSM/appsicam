@@ -1,0 +1,17 @@
+# Permitir acceso a todos los archivos en esta carpeta
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+# Habilitar el motor de reescritura
+RewriteEngine On
+
+# Redirigir automáticamente a la carpeta "cdnsicam" si no está presente en la URL
+RewriteCond %{REQUEST_URI} !^/appsicam/ [NC]
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|png|gif|ico|svg|woff|woff2|ttf|eot|json|xml|txt)$ [NC] # Evitar redirigir recursos estáticos
+RewriteRule ^(.*)$ /appsicam/$1 [L]
+
+
+# Personalizar errores
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
