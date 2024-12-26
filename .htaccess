@@ -1,0 +1,14 @@
+# Habilitar el motor de reescritura
+RewriteEngine On
+
+# Redirigir todas las solicitudes HTTPS (asegurar HTTPS)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Configurar el directorio base para rutas estáticas
+RewriteCond %{REQUEST_URI} ^/(css|js|img|svg|fonts|videos|audios|plugins|letras|plantillas|utilidades)/ [NC]
+RewriteRule ^(.*)$ /appsicam/$1 [L]
+
+# Redirigir todas las demás solicitudes a cdnsicam
+RewriteCond %{REQUEST_URI} !^/web/ [NC]
+RewriteRule ^(.*)$ /web/$1 [L]
