@@ -1,4 +1,5 @@
 <?php
+echo __DIR__;die();
 
 require_once '/base.php';
 
