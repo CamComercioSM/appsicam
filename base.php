@@ -19,7 +19,7 @@ if (!defined('DIR_CONFIG')) {
     define('DIR_CONFIG', DIR_CORE . "config" . DS);
 }
 if (!defined('DIR_LIBRERIA')) {
-    define('DIR_LIBRERIA', DIR_CORE . "libs" . DS);
+    define('DIR_LIBRERIA', DIR_CORE . "lib" . DS);
 }
 if (!defined('URL_LIBRERIA')) {
     define('URL_LIBRERIA', "https://libs.tiendasicam32.net/");
