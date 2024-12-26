@@ -1,6 +1,6 @@
 <?php
 //Archivo de Configuración y Variables Aplicacion  20230501
-require_once DIR_BASE . 'nucleo/ConfigBASE.php';  //'/home/tiendasicam32/public_html/libs/ConfigBASE.php';
+require_once DIR_CONFIG . 'ConfigBASE.php';  //'/home/tiendasicam32/public_html/libs/ConfigBASE.php';
 
 class ConfigAPP extends ConfigBASE {
     public $GoogleAnalitycsTag = "G-ZBTLK22S7Q";
