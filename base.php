@@ -12,16 +12,22 @@ define('DS', DIRECTORY_SEPARATOR);
 if (!defined('DIR_BASE')) {
     define('DIR_BASE', __DIR__ . DS);
 }
+if (!defined('DIR_CORE')) {
+    define('DIR_CORE', DIR_BASE . "nucleo" . DS);
+}
+if (!defined('DIR_CONFIG')) {
+    define('DIR_CONFIG', DIR_CORE . "config" . DS);
+}
 if (!defined('DIR_LIBRERIA')) {
-    define('DIR_LIBRERIA', DIR_BASE . "libs" . DS);
+    define('DIR_LIBRERIA', DIR_CORE . "libs" . DS);
 }
 if (!defined('URL_LIBRERIA')) {
     define('URL_LIBRERIA', "https://libs.tiendasicam32.net/");
 }
-require_once DIR_BASE . 'nucleo/Superglobales.php';
-require_once DIR_BASE . 'nucleo/ConfigBASE.php';
-require_once DIR_BASE . 'nucleo/ConfigAPP.php';
-require_once DIR_LIBRERIA . 'clases/apis/ApiSICAM' . (isset($modo) ? $modo : "") . '.php';
+require_once DIR_CONFIG . 'Superglobales.php';
+require_once DIR_BASE . 'ConfigBASE.php';
+require_once DIR_BASE . 'ConfigAPP.php';
+require_once DIR_LIBRERIA . 'apis/ApiSICAM' . (isset($modo) ? $modo : "") . '.php';
 //Autoloads
 require_once DIR_LIBRERIA . 'vendor/autoload.php';
 //
