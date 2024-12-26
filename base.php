@@ -25,8 +25,8 @@ if (!defined('URL_LIBRERIA')) {
     define('URL_LIBRERIA', "https://libs.tiendasicam32.net/");
 }
 require_once DIR_CONFIG . 'Superglobales.php';
-require_once DIR_BASE . 'ConfigBASE.php';
-require_once DIR_BASE . 'ConfigAPP.php';
+require_once DIR_CONFIG . 'ConfigBASE.php';
+require_once DIR_CONFIG . 'ConfigAPP.php';
 require_once DIR_LIBRERIA . 'apis/ApiSICAM' . (isset($modo) ? $modo : "") . '.php';
 //Autoloads
 require_once DIR_LIBRERIA . 'vendor/autoload.php';
