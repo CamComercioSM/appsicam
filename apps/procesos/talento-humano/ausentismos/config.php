@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../../../configBASE.pruebas.php';
+require_once '/base.php';
 
 class Config extends ConfigAPP {
 
