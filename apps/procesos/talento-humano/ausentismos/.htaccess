@@ -1,0 +1,19 @@
+
+RewriteOptions inherit
+RewriteEngine On
+RewriteBase /
+# Is the request for a non-existent file?
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^cancelar/(.*)$ index.php?operacion=CANCELAR&ausenciaColaboradorID=$1 [L,QSA]
+RewriteRule ^cerrar/(.*)$ index.php?operacion=CERRAR&ausenciaColaboradorID=$1 [L,QSA]
+RewriteRule ^autorizar/(.*)$ index.php?operacion=AUTORIZAR&ausenciaColaboradorID=$1 [L,QSA]
+RewriteRule ^iniciar/(.*)$ index.php?operacion=INICIAR&ausenciaColaboradorID=$1 [L,QSA]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
