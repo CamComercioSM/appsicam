@@ -1,6 +1,7 @@
 <?php
 
 require_once '/home/s1c4mapps/public_html/base.php';
+include 'https://cdnsicam.net/clases/base-datos/talentohumano/Ausentismos.modelo.php';
 
 class Config extends ConfigAPP {
 
