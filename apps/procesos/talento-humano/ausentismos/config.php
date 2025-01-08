@@ -1,7 +1,17 @@
 <?php
 
 require_once '/home/s1c4mapps/public_html/base.php';
-include 'https://cdnsicam.net/clases/base-datos/talentohumano/Ausentismos.modelo.php';
+
+$url = 'https://cdnsicam.net/clases/base-datos/talentohumano/Ausentismos.modelo.php';
+
+// Obtener contenido con cURL
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+
+eval($response);
 
 class Config extends ConfigAPP {
 
