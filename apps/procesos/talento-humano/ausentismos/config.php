@@ -2,18 +2,6 @@
 
 require_once '/home/s1c4mapps/public_html/base.php';
 
-$url = 'https://cdnsicam.net/clases/base-datos/talentohumano/Ausentismos.modelo.php';
-
-// Obtener contenido con cURL
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$response = curl_exec($ch);
-curl_close($ch);
-
-echo $response;
-//eval($response . '');
-
 class Config extends ConfigAPP {
 
     public $APP_URL = "https://ausentismos.tiendasicam32.net/";
