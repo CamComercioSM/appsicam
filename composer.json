@@ -1,0 +1,14 @@
+{
+    "name": "catorres/appsicam",
+    "authors": [
+        {
+            "name": "CesarTorresCCSM",
+            "email": "catorres@ccsm.org.co"
+        }
+    ],
+    "require": {
+    },
+    "config": {
+        "vendor-dir": "nucleo/lib/vendor"
+    }
+}
